@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import VideoPlayer from 'react-video-js-player'
+import Car from './video/car.mp4'
+const App = () => {
+  const videoSrc = Car;
+  const poster = 'https://rukminim1.flixcart.com/image/416/416/k8by93k0/poster/h/2/f/medium-car-poster-decorative-poster-poster-for-room-high-original-imafqcnpvgkktpya.jpeg?q=70'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Videojs</h1>
+      <VideoPlayer 
+        src={videoSrc}
+        poster={poster}
+        width='720'
+        height='420'
+      />
     </div>
-  );
+  )
 }
-
-export default App;
+export default App
